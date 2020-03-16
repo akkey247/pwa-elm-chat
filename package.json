@@ -1,0 +1,22 @@
+{
+  "name": "pwa-sample",
+  "version": "1.0.0",
+  "description": "pwa sample app",
+  "scripts": {
+    "build": "npx elm make src/Main.elm --output main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akkey247/pwa-elm-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akkey247/pwa-elm-sample/issues"
+  },
+  "homepage": "https://github.com/akkey247/pwa-elm-sample#readme",
+  "dependencies": {
+    "elm": "^0.19.1-3"
+  }
+}
