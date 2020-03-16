@@ -16,7 +16,7 @@
     "url": "https://github.com/akkey247/pwa-elm-chat/issues"
   },
   "homepage": "https://github.com/akkey247/pwa-elm-chat#readme",
-  "dependencies": {
+  "devDependencies": {
     "elm": "^0.19.1-3"
   }
 }
