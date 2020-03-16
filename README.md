@@ -1,6 +1,6 @@
-# pwa-elm-sample
+# pwa-elm-chat
 
-PWAをElmで作成するサンプル
+Elmで作るPWAのチャットアプリ
 
 # 使い方
 

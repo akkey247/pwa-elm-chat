@@ -1,7 +1,7 @@
 // キャッシュ名とキャッシュファイルの指定
-var CACHE_NAME = 'pwa-elm-sample-caches';
+var CACHE_NAME = 'pwa-elm-chat-caches';
 var urlsToCache = [
-    '/akkey247.github.io/',
+    '/akkey247.github.io/pwa-elm-chat/',
 ];
 
 // インストール処理
