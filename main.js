@@ -5916,18 +5916,8 @@ var $elm$html$Html$Attributes$stringProperty = F2(
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $rundis$elm_bootstrap$Bootstrap$Grid$containerFluid = F2(
-	function (attributes, children) {
-		return A2(
-			$elm$html$Html$div,
-			_Utils_ap(
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('container-fluid')
-					]),
-				attributes),
-			children);
-	});
+var $elm$html$Html$input = _VirtualDom_node('input');
+var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$Attributes$href = function (url) {
 	return A2(
 		$elm$html$Html$Attributes$stringProperty,
@@ -5951,6 +5941,7 @@ var $rundis$elm_bootstrap$Bootstrap$CDN$stylesheet = A3(
 	_List_Nil);
 var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
 var $author$project$Main$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -5963,28 +5954,58 @@ var $author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						$elm$html$Html$Attributes$class('fixed-top'),
-						$elm$html$Html$Attributes$class('fixed-top')
+						$elm$html$Html$Attributes$class('header')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('ヘッダー')
-					])),
-				A2(
-				$rundis$elm_bootstrap$Bootstrap$Grid$containerFluid,
-				_List_Nil,
-				_List_fromArray(
-					[
-						A2($elm$html$Html$div, _List_Nil, _List_Nil)
+						$elm$html$Html$text('チャット')
 					])),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('fixed-bottom')
+						$elm$html$Html$Attributes$class('message-area')
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('フッター')
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('receive-message')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('test')
+							])),
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$class('send-message')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('test')
+							]))
+					])),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('fixed-bottom'),
+						$elm$html$Html$Attributes$class('message-bar')
+					]),
+				_List_fromArray(
+					[
+						A2(
+						$elm$html$Html$input,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$placeholder('Message'),
+								$elm$html$Html$Attributes$value('')
+							]),
+						_List_Nil)
 					]))
 			]));
 };

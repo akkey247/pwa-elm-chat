@@ -82,30 +82,24 @@ view model =
         [ CDN.stylesheet
         , div
             [ class "fixed-top"
-            , class "fixed-top"
+            , class "header"
             ]
-            [ text "ヘッダー"
+            [ text "チャット"
             ]
-        , Grid.containerFluid []
-            [ div [] []
+        , div
+            [ class "message-area"
+            ]
+            [ div
+                [ class "receive-message" ]
+                [ text "test" ]
+            , div
+                [ class "send-message" ]
+                [ text "test" ]
             ]
         , div
             [ class "fixed-bottom"
+            , class "message-bar"
             ]
-            [ text "フッター"
+            [ input [ placeholder "Message", value "" ] []
             ]
         ]
-
-
--- User-Defined Functions
-
--- Style
-
-styleHeader =
-    [ ("height", "50px")
-    , ("background-color", "#cccccc")
-    , ("color", "#f1f1f1")
-    ]
-
-styleMessageBar =
-    []
