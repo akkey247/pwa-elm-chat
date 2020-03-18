@@ -98,6 +98,48 @@ view model =
                 , div
                     [ class "send-message" ]
                     [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
                 ]
             ]
         , div

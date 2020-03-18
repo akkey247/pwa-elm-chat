@@ -1,6 +1,6 @@
 {
-    "short_name": "PWAサンプル",
-    "name": "PWAサンプルアプリ",
+    "short_name": "PWAチャット",
+    "name": "PWAチャット",
     "display": "standalone",
     "start_url": "/pwa-elm-chat/",
     "icons": [
