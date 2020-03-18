@@ -2,6 +2,11 @@ module Main exposing (main)
 
 import Browser
 import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Bootstrap.CDN as CDN
+import Bootstrap.Grid as Grid
+import Bootstrap.Navbar as Navbar
 
 
 
@@ -22,13 +27,22 @@ main =
 
 
 type alias Model =
-    { name : String }
+    { name : String
+    , navState : Navbar.State
+    }
 
 
 init : () -> (Model, Cmd Msg)
 init _ =
-    ( Model "Hello World!!"
-    , Cmd.none
+    let
+        name =
+            "Hello World!!"
+
+        ( navState, navCmd ) =
+            Navbar.initialState NavMsg
+    in
+    ( Model name navState
+    , navCmd
     )
 
 
@@ -37,14 +51,16 @@ init _ =
 
 
 type Msg
-    = Msg
+    = NavMsg Navbar.State
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
-update _ model =
-    ( model
-    , Cmd.none
-    )
+update msg model =
+    case msg of
+        NavMsg state ->
+            ( { model | navState = state }
+            , Cmd.none
+            )
 
 
 
@@ -52,8 +68,8 @@ update _ model =
 
 
 subscriptions : Model -> Sub Msg
-subscriptions _ =
-    Sub.none
+subscriptions model =
+    Navbar.subscriptions model.navState NavMsg
 
 
 
@@ -63,4 +79,33 @@ subscriptions _ =
 view : Model -> Html Msg
 view model =
     div []
-        [ div [] [ text model.name ] ]
+        [ CDN.stylesheet
+        , div
+            [ class "fixed-top"
+            , class "fixed-top"
+            ]
+            [ text "ヘッダー"
+            ]
+        , Grid.containerFluid []
+            [ div [] []
+            ]
+        , div
+            [ class "fixed-bottom"
+            ]
+            [ text "フッター"
+            ]
+        ]
+
+
+-- User-Defined Functions
+
+-- Style
+
+styleHeader =
+    [ ("height", "50px")
+    , ("background-color", "#cccccc")
+    , ("color", "#f1f1f1")
+    ]
+
+styleMessageBar =
+    []
