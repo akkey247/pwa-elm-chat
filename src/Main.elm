@@ -78,7 +78,7 @@ subscriptions model =
 
 view : Model -> Html Msg
 view model =
-    div []
+    div [ class "main" ]
         [ CDN.stylesheet
         , div
             [ class "fixed-top"
@@ -87,14 +87,18 @@ view model =
             [ text "チャット"
             ]
         , div
-            [ class "message-area"
+            [ class "fixed-top"
+            , class "message-area-wrap"
             ]
             [ div
-                [ class "receive-message" ]
-                [ text "test" ]
-            , div
-                [ class "send-message" ]
-                [ text "test" ]
+                [ class "message-area" ]
+                [ div
+                    [ class "receive-message" ]
+                    [ text "test" ]
+                , div
+                    [ class "send-message" ]
+                    [ text "test" ]
+                ]
             ]
         , div
             [ class "fixed-bottom"

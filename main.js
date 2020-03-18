@@ -5945,7 +5945,10 @@ var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('
 var $author$project$Main$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('main')
+			]),
 		_List_fromArray(
 			[
 				$rundis$elm_bootstrap$Bootstrap$CDN$stylesheet,
@@ -5964,7 +5967,8 @@ var $author$project$Main$view = function (model) {
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('message-area')
+						$elm$html$Html$Attributes$class('fixed-top'),
+						$elm$html$Html$Attributes$class('message-area-wrap')
 					]),
 				_List_fromArray(
 					[
@@ -5972,21 +5976,30 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('receive-message')
+								$elm$html$Html$Attributes$class('message-area')
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text('test')
-							])),
-						A2(
-						$elm$html$Html$div,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$class('send-message')
-							]),
-						_List_fromArray(
-							[
-								$elm$html$Html$text('test')
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('receive-message')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('test')
+									])),
+								A2(
+								$elm$html$Html$div,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('send-message')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('test')
+									]))
 							]))
 					])),
 				A2(

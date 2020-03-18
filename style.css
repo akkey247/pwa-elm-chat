@@ -1,6 +1,15 @@
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100vw;
+}
+
 /* ヘッダー */
 
 .header {
+    z-index: 20;
     height: 60px;
     line-height: 50px;
     padding: 5px 15px;
@@ -9,13 +18,24 @@
     font-size: 20px;
     color: #f1f1f1;
 }
+.fixed-top.header {
+    z-index: 20;
+}
 
 /* メッセージエリア */
 
-.message-area {
-    min-height: 100vh;
-    padding: 78px 15px 60px;
+.message-area-wrap {
+    height: calc(100vh - 110px);
     background-color: #f1f1f1;
+    overflow: auto;
+}
+.fixed-top.message-area-wrap {
+    top: 60px;
+    z-index: 10;
+}
+
+.message-area {
+    padding: 18px 15px 0;
 }
 
 .send-message,
@@ -24,7 +44,7 @@
     position: relative;
     padding: 8px 15px;
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .send-message::after,
