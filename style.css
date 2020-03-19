@@ -32,10 +32,12 @@
 .fixed-top.message-area-wrap {
     top: 60px;
     z-index: 10;
+    overflow-scrolling: touch;
 }
 
 .message-area {
     padding: 18px 15px 0;
+    overflow-scrolling: touch;
 }
 
 .send-message,
